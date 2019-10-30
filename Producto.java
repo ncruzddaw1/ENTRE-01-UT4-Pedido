@@ -32,16 +32,20 @@ public class Producto
     /**
      * obtiene un nuevo producto copia idéntica del actual
      */
-    public         obtenerCopia() {
-         
+    public Producto obtenerCopia() 
+    {
+         Producto copia = new Producto(nombre,precio);
+         return copia;
     }
 
     /**
      * Representación textual de un producto
      * (ver enunciado)
      */
-    public String toString() {
-        
+    public String toString() 
+    {
+        String str = String.format("%30s %8.2f € Unidades",nombre,precio);
+        return str;
     }
 
 }

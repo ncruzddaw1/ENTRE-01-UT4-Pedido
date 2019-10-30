@@ -9,20 +9,21 @@ public class LineaPedido
 {
     private Producto producto;
     private int cantidad;
-     
-
     /**
      * Constructor  
      */
-    public LineaPedido()    {
-         
+    public LineaPedido(Producto producto,int cantidad)    
+    {
+         this.cantidad = cantidad;
+         this.producto = producto;
     }
 
      /**
      * accesor para el producto
      */
-    public     getProducto() {
-         
+    public Producto getProducto()
+    {
+        return producto;
     }
 
     /**
@@ -35,14 +36,19 @@ public class LineaPedido
     /**
      * obtiene una nueva línea de pedido copia idéntica de la actual
      */
-    public    obtenerCopia() {
-         
+    public LineaPedido obtenerCopia() 
+    {
+         LineaPedido copia = new LineaPedido(producto.obtenerCopia(),cantidad);
+         return copia;
     }
+    
      /**
      * Representación textual de la línea de pedido
      * (ver enunciado)
      */
-    public String toString() {
-        
+    public String toString() 
+    {
+        String str= String.format(producto.toString() + "%4d \nUnidades", cantidad);
+        return str;
     }
 }
