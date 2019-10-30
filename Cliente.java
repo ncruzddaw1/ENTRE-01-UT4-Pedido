@@ -54,7 +54,7 @@ public class Cliente
     public String toString() 
     {
         String str = String.format("%10s %-10s\n%10s %-10s\n%10s %-10s\n%10s %-10s\n",
-                                   "NOMBRE", nombre, "DIRECCION", direccion, "CIUDAD", ciudad,
+                                   "\nNOMBRE", nombre, "DIRECCION", direccion, "CIUDAD", ciudad,
                                    "PROVINCIA", provincia);                          
         return str;
     }

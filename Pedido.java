@@ -74,12 +74,12 @@ public class Pedido
      */
     public String toString() 
     {
-        String str = "FECHA PEDIDO: " + fecha.toString()
+        String str = "\nFECHA PEDIDO: " + fecha.toString()
                   + "\nDATOS DEL CLIENTE: " + cliente.toString()
-                  + "\n**** Articulos en elpedido ****" + linea1.toString() + linea2.toString()
-                  + "\n**** A pagar ****"
+                  + "\n**** Articulos en elpedido ****\n" + linea1.toString() + linea2.toString()
+                  + "\n**** A pagar ****\n"
                   +  String.format("%20s %8.2f€ \n%20s %8.2f€ \n%20s %8.2f€",
-                     "IMPORTE SIN IVA: " ,getImporteAntesIva(),
+                     "\nIMPORTE SIN IVA: " ,getImporteAntesIva(),
                      "IVA: ",getIva(),
                      "IMPORTE TOTAL: ",getImporteTotal());
         return str;
